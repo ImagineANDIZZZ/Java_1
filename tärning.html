@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="tärning.css">
 </head>
 <body>
+    <div id="Flex-container">
+        <img src="dice1.png" class="dice" alt="">
+        <img src="dice2.png" class="dice" alt="">
+        <img src="dice3.png" class="dice" alt="">
+        <img src="dice4.png" class="dice" alt="">
+        <img src="dice5.png" class="dice" alt="">
+        <button onclick="rool()">Kasta tärningar!</button>
+    </div>
+    <script>
+        function rool(){
+
+            dice = document.getElementsByClassName("dice")
+            for(let i = 0;i < 5; i++){
+                number = Math.floor(Math.random()*6) + 1
+                dice[i].src = "dice" + number + ".png"
+            }
+        }
+    </script>
     
 </body>
 </html>

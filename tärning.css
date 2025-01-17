@@ -1,0 +1,17 @@
+#Flex-container{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.dice{
+    width: 15%;
+    height: 15%;
+}
+
+button{
+    width: 40%;
+    height: 20%;
+    background-color: green;
+}
