@@ -8,23 +8,51 @@
 </head>
 <body>
     <div id="Flex-container">
-        <img src="dice1.png" class="dice" alt="">
-        <img src="dice2.png" class="dice" alt="">
-        <img src="dice3.png" class="dice" alt="">
-        <img src="dice4.png" class="dice" alt="">
-        <img src="dice5.png" class="dice" alt="">
+        <div class="dice-div">
+            <img src="dice1.png" class="dice" alt="">
+        <input type="checkbox" />
+        </div>
+        <div class="dice-div">
+            <img src="dice2.png" class="dice" alt="">
+        <input type="checkbox" />
+
+        </div>
+        <div class="dice-div">
+            <img src="dice3.png" class="dice" alt="">
+            <input type="checkbox" />
+
+        </div>
+        <div class="dice-div">
+            <img src="dice4.png" class="dice" alt="">
+            <input type="checkbox" />
+
+        </div>
+        <div class="dice-div">
+            <img src="dice5.png" class="dice" alt="">
+            <input type="checkbox" />
+
+        </div>
         <button onclick="rool()">Kasta tärningar!</button>
     </div>
     <script>
+        dice_values = [1,1,1,1,1]
         function rool(){
 
             dice = document.getElementsByClassName("dice")
             for(let i = 0;i < 5; i++){
-                number = Math.floor(Math.random()*6) + 1
-                dice[i].src = "dice" + number + ".png"
+                checkboxes = document.getElementsByTagName("input")
+                if (checkboxes[i].checked){
+                    console.log("låst tärning")
+                }else{
+                    number = Math.floor(Math.random()*6) + 1
+                    dice[i].src = "dice" + number + ".png"
+                    dice_values[i] = number
+                }
+                
             }
+
+            console.log(dice_values)
         }
     </script>
-    
 </body>
 </html>
