@@ -18,6 +18,10 @@ button{
     background-color: rgb(69, 162, 165);
 }
 
+input[type=checkbox] {
+    scale: 170%;
+}
+
 .dicediv{
     margin: 50px;
     display: flex;
