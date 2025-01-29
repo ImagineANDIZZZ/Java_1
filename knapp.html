@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+</head>
+<body>
+    <button class="button is-success is-dark" onclick="toggleMode()">min knapp</button>
+    <button class="button is-success is-light" onclick="toggleMode()">min knapp</button>
+    <button class="button is-warning" onclick="toggleMode()">min knapp</button>
+    <button class="button is-success" onclick="toggleMode()">min knapp</button>
+    <button class="button is-success is-ghost" onclick="toggleMode()">min knapp</button>
+    <script>
+        function toggleMode(){
+            html = document.getElementsByTagName("html");
+            html[0].classList.toggle("theme-dark");
+            html[0].classList.toggle("theme-light");
+        }
+    </script>
+</body>
+</html>
